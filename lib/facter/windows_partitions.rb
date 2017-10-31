@@ -1,6 +1,7 @@
 Facter.add('partitions') do
   confine :kernel => 'windows'
 
+  #thing
   require_relative '../puppet_x/disk_facts/underscore.rb'
   require 'json'
   setcode do
@@ -22,3 +23,4 @@ Facter.add('partitions') do
     partitions_renamed
   end
 end
+
